@@ -3,6 +3,14 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import GridMotion from './GridMotion';
+import Stats from '@/components/Stats';
+import Features from '@/components/Features';
+import HowItWorks from '@/components/HowItWorks';
+import Testimonial from '@/components/Testimonial';
+import Pricing from '@/components/Pricing';
+import Faq from '@/components/Faq';
+import CtaBand from '@/components/CtaBand';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const bgImageUrl =
@@ -12,20 +20,33 @@ export default function Home() {
   const gridItems = Array.from({ length: 28 }, () => bgImageUrl);
 
   return (
-    <main className="relative w-full h-screen min-h-[640px] overflow-hidden bg-[#040407] text-white flex flex-col justify-between selection:bg-[#ff4d29] selection:text-white">
-      {/* Dynamic Interactive Grid Motion Background */}
-      <GridMotion items={gridItems} gradientColor="#07080f" />
+    <main className="relative w-full min-h-screen bg-[#040407] text-white selection:bg-[#ff4d29] selection:text-white">
+      {/* HERO — GridMotion stays hero-only */}
+      <div className="relative h-screen min-h-[640px] overflow-hidden flex flex-col justify-between">
+        {/* Dynamic Interactive Grid Motion Background */}
+        <GridMotion items={gridItems} gradientColor="#07080f" />
 
-      {/* Atmospheric Vignettes & Overlays for readability and contrast */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#040407] via-[#040407]/50 to-transparent z-10" />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#040407]/90 via-[#040407]/40 to-transparent z-10" />
-      <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none bg-gradient-to-b from-[#040407]/80 to-transparent z-10" />
+        {/* Atmospheric Vignettes & Overlays for readability and contrast */}
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#040407] via-[#040407]/50 to-transparent z-10" />
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#040407]/90 via-[#040407]/40 to-transparent z-10" />
+        <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none bg-gradient-to-b from-[#040407]/80 to-transparent z-10" />
 
-      {/* Top Navigation Bar Component */}
-      <Navbar />
+        {/* Top Navigation Bar Component */}
+        <Navbar />
 
-      {/* Bottom Left Hero Content Component */}
-      <Hero />
+        {/* Bottom Left Hero Content Component */}
+        <Hero />
+      </div>
+
+      {/* Page sections on flat #040407 */}
+      <Stats />
+      <Features />
+      <HowItWorks />
+      <Testimonial />
+      <Pricing />
+      <Faq />
+      <CtaBand />
+      <Footer />
     </main>
   );
 }

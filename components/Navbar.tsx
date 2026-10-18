@@ -28,41 +28,41 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Right: Navigation Links & Connect Wallet CTA */}
+      {/* Right: Navigation Links & CTA */}
       <nav className="flex items-center gap-6 md:gap-10">
         <div className="hidden sm:flex items-center gap-7 md:gap-9 text-sm text-zinc-300 font-normal">
           <a
-            href="#solutions"
+            href="#features"
             className="hover:text-white transition-colors duration-200 tracking-wide"
           >
-            Solutions
+            Features
           </a>
           <a
-            href="#product"
+            href="#how-it-works"
             className="hover:text-white transition-colors duration-200 tracking-wide"
           >
-            Product
+            How it works
           </a>
           <a
-            href="#about"
+            href="#pricing"
             className="hover:text-white transition-colors duration-200 tracking-wide"
           >
-            About
+            Pricing
           </a>
           <a
-            href="#resources"
+            href="#faq"
             className="hover:text-white transition-colors duration-200 tracking-wide"
           >
-            Resources
+            FAQ
           </a>
         </div>
 
-        <button
-          id="connect-wallet-btn"
+        <a
+          href="#pricing"
           className="px-5 py-2 md:px-6 md:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white border border-white/20 bg-white/[0.05] hover:bg-white/[0.12] hover:border-white/40 active:scale-95 transition-all duration-200 backdrop-blur-md shadow-sm cursor-pointer"
         >
-          Connect Wallet
-        </button>
+          Get started
+        </a>
       </nav>
     </header>
   );
